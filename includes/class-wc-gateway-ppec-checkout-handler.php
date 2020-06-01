@@ -597,7 +597,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		if ( $this->has_active_session() ) {
 			printf(
 				'<a href="%s" class="wc-gateway-ppec-cancel">%s</a>',
-				esc_url( add_query_arg( 'wc-gateway-ppec-clear-session', true, wc_get_cart_url() ) ),
+				esc_url( add_query_arg( 'wc-gateway-ppec-clear-session', true, wc_get_checkout_url() ) ),
 				esc_html__( 'Cancel', 'woocommerce-gateway-paypal-express-checkout' )
 			);
 		}

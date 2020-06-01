@@ -387,7 +387,7 @@ class WC_Gateway_PPEC_Client {
 	 * @return string Cancel URL
 	 */
 	protected function _get_cancel_url( $context_args ) {
-		$url      = add_query_arg( 'woo-paypal-cancel', 'true', wc_get_cart_url() );
+		$url      = add_query_arg( 'woo-paypal-cancel', 'true', wc_get_checkout_url() );
 		$order_id = $context_args['order_id'];
 		return apply_filters( 'woocommerce_paypal_express_checkout_set_express_checkout_params_get_cancel_url', $url, $order_id );
 	}
